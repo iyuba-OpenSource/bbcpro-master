@@ -1,0 +1,5 @@
+rootProject.name = "bbcpro"
+include ':bbc_finish'
+//include ':privacy'
+
+include ':common'

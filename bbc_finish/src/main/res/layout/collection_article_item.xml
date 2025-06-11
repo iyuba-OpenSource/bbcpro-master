@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_collection"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_collection"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_collection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_collection"
+        android:layout_toEndOf="@id/iv_collection"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingTop="8dp"
+        android:text="迪拜外卖配送员面临更多危险"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_collection_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/iv_collection"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="2021-09-27"
+        android:textSize="14sp" />
+
+    <TextView
+
+        android:id="@+id/tv_collection_cate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_collection_time"
+        android:layout_toRightOf="@+id/iv_collection"
+        android:text="BBC新闻"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/delete_collection"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_delete_collection" />
+
+</RelativeLayout>

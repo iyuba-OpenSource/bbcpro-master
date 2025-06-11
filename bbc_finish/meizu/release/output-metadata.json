@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ai.bbepro",
+  "variantName": "meizuRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 17,
+      "versionName": "2.22.15",
+      "outputFile": "[meizu]-release-[2.22.15]-[17]-2024-06-14.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/[meizu]-release-[2.22.15]-[17]-2024-06-14.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/[meizu]-release-[2.22.15]-[17]-2024-06-14.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 21
+}

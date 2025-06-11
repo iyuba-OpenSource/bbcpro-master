@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ai.bbcpro.ui.widget.RoundAngleImageView
+            android:id="@+id/iv_headlines"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_toStartOf="@id/download_item"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="世界上最大的航空"
+                android:textColor="#ff000000"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/download_item"
+                android:layout_width="14dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/download_before" />
+
+
+            <RelativeLayout
+                android:id="@+id/dfn_rl_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_tv"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:id="@+id/dfn_ll_listen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.iyuba.widget.rpb.RoundProgressBar
+                        android:id="@+id/dfn_rpb_listen"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/icon_listen"
+                        app:rpbCircleColor="@android:color/darker_gray"
+                        app:rpbCircleProgressColor="?colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/dfn_tv_listen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="0%"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dfn_ll_exercises"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.iyuba.widget.rpb.RoundProgressBar
+                        android:id="@+id/dfn_rpb_exercises"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/icon_exercises"
+                        app:rpbCircleColor="@android:color/darker_gray"
+                        app:rpbCircleProgressColor="?colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/dfn_tv_exercises"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="0/1"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dfn_ll_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.iyuba.widget.rpb.RoundProgressBar
+                        android:id="@+id/dfn_rpb_test"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/icon_test"
+                        app:rpbCircleColor="@android:color/darker_gray"
+                        app:rpbCircleProgressColor="?colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/dfn_tv_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="0%"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dfn_rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dfn_rl_statistics"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/scan"
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/scan_view" />
+
+                    <TextView
+                        android:id="@+id/tv_view_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11111"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/text_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="1111-11-11"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/dfn_tv_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/darker_gray"
+                android:text="推广"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/download_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:max="100"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

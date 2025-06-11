@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ai.bbepro",
+  "variantName": "vivoRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 15,
+      "versionName": "2.21.15",
+      "outputFile": "[vivo]-release-[2.21.15]-[15]-2024-04-17.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/[vivo]-release-[2.21.15]-[15]-2024-04-17.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/[vivo]-release-[2.21.15]-[15]-2024-04-17.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 21
+}

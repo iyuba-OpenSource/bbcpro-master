@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="initial">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+
+    <string-array name="gender">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="pay_methods_images">
+        <item>@drawable/pay_zhifubao_icon</item>
+        <item>@drawable/pay_weixin_icon</item>
+        <!--  <item>@drawable/pay_bankcard_icon</item>-->
+    </string-array>
+
+    <string-array name="pay_methods">
+        <item>支付宝支付</item>
+        <item>微信支付</item>
+        <!-- <item>银行卡支付</item>-->
+    </string-array>
+    <string-array name="pay_method_hints">
+        <item>推荐有支付宝账号的用户使用</item>
+        <item>推荐安装微信5.0及以上版本的使用</item>
+        <!--<item>支持储蓄卡信用卡，无需开通网银</item>-->
+    </string-array>
+</resources>

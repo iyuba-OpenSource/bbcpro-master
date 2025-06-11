@@ -1,0 +1,245 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">BBE英语</string>
+    <string name="pic">导航图标</string>
+
+    <!-- login -->
+    <string name="login_check_effective_user_id">请填写有效的用户ID</string>
+    <string name="login_check_user_pwd_null">用户密码不能为空</string>
+    <string name="login_check_user_pwd_constraint">密码为6~20个字符</string>
+    <string name="login_faild">登录失败！请检查网络是否可用！</string>
+    <string name="login_fail">登录失败,请检查用户名和密码</string>
+    <string name="login_find_password">忘记密码？</string>
+    <string name="login_regist">注册</string>
+
+    <string name="check_network">网络错误</string>
+    <string name="action_fail">操作失败，请重试！</string>
+    <string name="loginout_success">退出成功！</string>
+
+    <!-- search word -->
+    <string name="search_word_hint">请输入查询内容</string>
+    <string name="word_title">单词</string>
+    <string name="search_word_do">搜索</string>
+    <string name="word_mean">解释:</string>
+    <string name="word_example">例句:</string>
+    <string name="word_null">请填写待查单词后再点击查询:</string>
+    <string name="no_word_example">尚无例句。正在紧张整理中…</string>
+
+    <!-- 取单词 -->
+    <string name="play_please_take_the_word">请取英文单词</string>
+    <string name="play_ins_new_word_success">成功加入生词本！</string>
+
+    <string name="minName">SurfingNearby</string>
+    <string name="minVer">2.0</string>
+    <string name="runEnv_name">Android</string>
+    <string name="ssite_code">10</string>
+
+    <string name="study_all_loaded">已加载全部评论</string>
+    <string name="study_no_comment">目前还没有评论</string>
+
+    <string name="study_input_comment">请输入评论内容</string>
+
+    <!-- MobClassListFragment中的String字段 -->
+
+    <!-- 播放器页面相关字符资源 -->
+    <string name="play_no_login">当前未登录！请登录！</string>
+
+    <!-- 下拉刷新相关字符资源 -->
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_lastest">最新更新:</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_release_label">释放加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中...</string>
+
+    <!-- word -->
+    <string name="newword_please_select_word">请选择要删除的生词</string>
+    <string name="no_new_word">尚未添加生词，无法删除</string>
+    <string name="word_add_all">云生词本加载完毕</string>
+    <string name="word_no_data">生词本中还没有单词,快去添加一条吧</string>
+    <!-- home -->
+    <string name="person_vip_limit">VIP有效期已过</string>
+    <!-- 注册界面相关字符资源 -->
+    <string name="regist_title">用户注册</string>
+    <string name="regist_user_id_hint">3~20位英文、数字或汉字</string>
+    <string name="regist_user_pwd_hint">6~20位英文、数字或者下划线</string>
+    <string name="regist_user_repwd_hint">确认密码</string>
+    <string name="regist_email_hint">输入常用的邮箱，用于找回密码</string>
+    <string name="regist_check_username_1">3~20字符</string>
+    <string name="regist_check_username_2">不允许使用手机号或邮箱地址作为用户名</string>
+    <string name="regist_check_userpwd_1">6~20字符</string>
+    <string name="regist_check_reuserpwd">两次密码不匹配！</string>
+    <string name="regist_check_email_1">用户email不能为空</string>
+    <string name="regist_check_email_2">请填写有效的email</string>
+    <!-- Regist -->
+    <string name="regist_email_used">邮箱已经被注册</string>
+    <string name="regist_operating">操作中，请等候</string>
+    <string name="regist_userid_exist">该用户名已存在,请换一个用户名试试~</string>
+    <string name="regist_phone_getcode">获取验证码</string>
+    <string name="regist_phone_verifycode">进行验证</string>
+    <string name="regist_phone_toemail">邮箱方式注册>>>>></string>
+    <string name="regist_phone_inputphone">请输入你的手机号</string>
+    <string name="regist_phone_inputcode">输入验证码</string>
+    <string name="regist_phone_username">用户名 3~20位英文、数字或汉字</string>
+    <string name="regist_phone_paswd">密码 6~20位英文、数字或者下划线</string>
+    <string name="regist_success">注册成功！欢迎加入爱语吧！</string>
+    <string name="regist_fail">注册失败,请重试</string>
+    <string name="regist_phone_tocomplete">填入用户名和密码就可以完成注册</string>
+    <!-- uploadimage -->
+    <string name="uploadimage">上传头像</string>
+    <string name="uploadimage_default">头像示例</string>
+    <string name="uploadimage_text">上传一张靓照吧，展现自己个性，积分+20</string>
+    <string name="uploadimage_comlete">完成</string>
+    <string name="uploadimage_bycamera">相机拍摄</string>
+    <string name="uploadimage_bylocal">选择本地图片</string>
+    <string name="uploadimage_skip">跳过</string>
+    <string name="uploadimage_uploading">正在上传头像，请稍候~~~</string>
+    <string name="uploadimage_success">您的头像修改成功</string>
+    <string name="uploadimage_failupload">提交失败，请重新上传</string>
+    <!-- hint -->
+    <!-- 其他 -->
+
+    <string name="logout_alert">登录状态可以享受更多服务\n您确定要退出吗？</string>
+
+    <!-- 通用 -->
+
+    <string name="no_login">您还未登录！请登录！</string>
+    <string name="check_gps">请打开GPS获取位置信息！</string>
+    <string name="send">发送</string>
+    <string name="never_update">从未更新过</string>
+    <!-- main -->
+    <string name="discover_collect_word">单词本</string>
+
+    <!-- 意见反馈界面相关字符资源 -->
+    <string name="feedback_contact">联系方式（有效的邮箱地址）</string>
+    <string name="feedback_contact_title">联系方式</string>
+    <string name="feedback_submit_success">意见反馈已提交！</string>
+    <string name="feedback_network_error">网络错误，未能提交反馈！</string>
+
+    <!-- discovery -->
+    <string name="discover_search_word">查单词</string>
+
+    <string name="alert_title">提示</string>
+    <string name="alert_btn_ok">确认</string>
+    <string name="alert_btn_cancel">取消</string>
+
+    <string name="person_info_title">编辑个人资料</string>
+    <string name="person_info_gender">性别</string>
+    <string name="person_info_birth">出生日期</string>
+    <string name="person_info_success">修改成功</string>
+    <string name="person_info_fail">修改失败，请重试</string>
+    <string name="person_info_save">保存</string>
+    <string name="person_info_uploadPic">上传头像</string>
+    <string name="person_info_local_now">所在地</string>
+    <string name="person_info_school">大学</string>
+    <string name="person_info_zodiac">生肖</string>
+    <string name="person_info_constellation">星座</string>
+    <string name="regist">注册</string>
+
+    <!--排行榜-->
+
+    <string name="tips">提示</string>
+    <string name="dialog_word">单词释义</string>
+    <string name="cancel">取消</string>
+    <string name="col_word">加生词本</string>
+    <string name="written_off_tip_content">账号一旦注销，该账号下的信息将不再保留，且不能再继续使用该账号进行登录学习，确定注销？</string>
+    <string name="continue_written_off">继续注销</string>
+    <string name="sure">确定</string>
+    <string name="promotion">推广</string>
+    <string name="submit">提交</string>
+    <string name="merge">合成</string>
+    <string name="publish">发布</string>
+    <string name="audition">试听</string>
+    <string name="shared">分享</string>
+    <string name="vip_intro1">1.尊贵V标识\n2.去除广告，专注学习\n3.可选择自由调节语速\n4.无限语音评测\n5.PDF导出\n6.本应用VIP仅限Android端当前应用使用</string>
+    <string name="vip_intro2">1.尊享微课模块:VOA英语Lisa博士、Rachel美语发音；Alex博士BBC英式发音；新概念英语全4册；四六级名师陈苏灵、李尚龙、石雷鹏、尹延、章敏等；托福、雅思、考研、学位英语、中职英语等名师讲解所有课程全部免费学习\n2.尊享爱语吧旗下全站会员特权。</string>
+    <string name="menuItem1">PDF导出</string>
+    <string name="menuItem2">分享</string>"
+    <string name="menuItem3">收藏</string>"
+    <string name="menuItem4">取消收藏</string>"
+    <string name="menuItem5">更新数据</string>"
+
+    <string name="user_name_pwd_desc">上方已经为您生成了默认的用户名和密码，您可以在上面输入框中进行修改（默认密码为手机号后六位）。</string>
+    <string name="register">注册</string>
+    <string name="default_user_name">默认用户名</string>
+    <string name="input_user_name_hint">请输入用户名 (3–15个字符)</string>
+    <string name="default_password">默认密码</string>
+    <string name="input_password_hint">请输入6–18位密码</string>
+    <string name="privacy_msg_title">个人信息保护政策</string>
+
+    <string name="file_provider_name_personal">com.ai.bbcpro</string>
+
+
+    <string-array name="bbc_category">
+        <item>全部</item>
+        <item>新闻</item>
+        <item>六分钟英语</item>
+        <item>地道英语</item>
+        <item>职场英语</item>
+        <item>新闻词汇</item>
+        <item>经济学人</item>
+        <item>ITV News</item>
+        <item>Skype News</item>
+    </string-array>
+    <integer-array name="bbc_category_number">
+        <item>0</item>
+        <item>3</item>
+        <item>1</item>
+        <item>5</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </integer-array>
+
+    <string-array name="bbc_video_category">
+        <item>BBC新闻</item>
+        <item>BBC新闻词汇</item>
+        <item>经济学人</item>
+        <item>ITV News</item>
+        <item>Skype News</item>
+    </string-array>
+    <integer-array name="bbc_video_category_number">
+        <item>3</item>
+        <item>4</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </integer-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="category_bbc_cn_six_minute" translatable="false">六分钟英语</string>
+    <string name="category_bbc_cn_working" translatable="false">职场英语</string>
+    <string name="category_bbc_cn_news" translatable="false">新闻</string>
+    <string name="category_bbc_cn_news_words" translatable="false">新闻词汇</string>
+    <string name="category_bbc_cn_native" translatable="false">地道英语</string>
+    <string name="category_bbc_cn_economist" translatable="false">经济学人</string>
+    <string name="category_bbc_cn_itv_news" translatable="false">ITV新闻</string>
+    <string name="category_bbc_cn_skype_news" translatable="false">Skype新闻</string>
+
+    <integer name="category_bbc_all_code">0</integer>
+    <integer name="category_bbc_six_minute_code">1</integer>
+    <integer name="category_bbc_working_code">2</integer>
+    <integer name="category_bbc_news_code">3</integer>
+    <integer name="category_bbc_news_words_code">4</integer>
+    <integer name="category_bbc_native_code">5</integer>
+    <integer name="category_bbc_economist_code">8</integer>
+    <integer name="category_bbc_itv_news_code">9</integer>
+    <integer name="category_bbc_skype_news_code">10</integer>
+
+
+    <string-array name="category_bbc_name_bjhd">
+        <item>@string/category_bbc_cn_economist</item>
+        <item>@string/category_bbc_cn_itv_news</item>
+        <item>@string/category_bbc_cn_skype_news</item>
+    </string-array>
+
+    <integer-array name="category_bbc_code_bihd">
+        <item>@integer/category_bbc_economist_code</item>
+        <item>@integer/category_bbc_itv_news_code</item>
+        <item>@integer/category_bbc_skype_news_code</item>
+    </integer-array>
+</resources>

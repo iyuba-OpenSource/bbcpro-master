@@ -1,0 +1,615 @@
+import java.text.SimpleDateFormat
+
+static def releaseTime() {
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    return formatter.format(new Date())
+}
+
+
+plugins {
+    id 'com.android.application'
+    id 'com.mob.sdk'
+}
+
+
+MobSDK {
+    appKey "m34ea34920ee6a"
+    appSecret "f944a37bd66cd344764beb3b208f37ce"
+    SMSSDK {}
+    SecVerify {}
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+
+            }
+            WechatMoments {
+
+            }
+            WechatFavorite {
+
+            }
+            SinaWeibo {
+//                appKey "3522397949"
+//                appSecret "5d7bbc0dc4f5c22dba5f6033654563a2"
+//                callbackUri "http://www.sharesdk.cn"
+            }
+            QQ {
+            }
+            QZone {
+
+            }
+        }
+    }
+}
+
+
+android {
+
+    /*没有使用科特林，但是科特林冲突*/
+    configurations.implementation {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {//如果是release包
+                    fileName = "${productFlavors.name}-${buildType.name}-${productFlavors.versionName}-" +
+                            "${productFlavors.versionCode}-${releaseTime()}.apk"
+                } else if (variant.buildType.name.equals('debug')) {//如果是debug包
+                    fileName = "${productFlavors.name}-${buildType.name}-${productFlavors.versionName}-" +
+                            "${productFlavors.versionCode}.apk"
+                }
+                outputFileName = fileName
+            }
+        }
+    }
+
+
+    signingConfigs {
+        iyuba {
+            storeFile file('../iyuba_android.keystore')
+            keyAlias 'android.keystore'
+            storePassword 'buaaiyuba'
+            keyPassword 'buaaiyuba'
+        }
+    }
+    compileSdk 35
+
+    namespace 'com.ai.bbcpro'
+
+    defaultConfig {
+
+        applicationId "com.ai.bbcpro"
+        minSdk 24
+        //noinspection ExpiredTargetSdkVersion
+        targetSdk 32
+        versionCode 7
+        versionName "2.5.1"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "arm64-v8a"
+            //"armeabi-v7a",
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+
+        viewBinding true
+        buildConfig true
+    }
+
+
+    useLibrary 'org.apache.http.legacy'
+    flavorDimensions = ["release"]
+    productFlavors {
+
+        //oppo
+        bbe {
+            ndk {
+                abiFilters "arm64-v8a"
+                // abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+            applicationId "com.ai.bbcpro"
+            minSdk 24
+            targetSdk 32
+            versionCode 18
+            versionName "2.23.21"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"1112090125"'
+            buildConfigField "String", "QQ_APP_SECRET", '"TQsh7vRT26u8x8BM"'
+            buildConfigField "String", "BRAND", '"bbe"'
+            manifestPlaceholders = [
+                    qqappid: '100737826',
+                    apkName: 'BBE英语',
+                    apkIcon: '@drawable/bbe'
+            ]
+
+            buildConfigField "String", "ICP", '"京ICP备18027903号-13A"'
+
+            //spalsh广告
+            buildConfigField "String", "SPLASH_AD_KEY_CSJ", '"0050"'
+            buildConfigField "String", "SPLASH_AD_KEY_YLH", '"1085"'
+            buildConfigField "String", "SPLASH_AD_KEY_KS", '"0000"'
+            buildConfigField "String", "SPLASH_AD_KEY_BD", '"1089"'
+            buildConfigField "String", "SPLASH_AD_KEY_BZ", '"0000"'
+
+            //banner广告
+            buildConfigField "String", "BANNER_AD_KEY_CSJ", '"0051"'
+            buildConfigField "String", "BANNER_AD_KEY_YLH", '"1086"'
+
+            //信息流广告
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_CSJ", '"1084"'
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_YLH", '"1088"'
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_KS", '"0000"'
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_BD", '"1091"'
+
+            //插屏广告 Interstitial
+            buildConfigField "String", "INTERSTITIAL_AD_KEY_CSJ", '"1083"'
+            buildConfigField "String", "INTERSTITIAL_AD_KEY_YLH", '"1087"'
+            buildConfigField "String", "INTERSTITIAL_AD_KEY_BD", '"1090"'
+
+
+            buildConfigField "String", "PROTOCOL_PRI", '"http://iuserspeech.iyuba.cn:9001/api/protocolpri.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://iuserspeech.iyuba.cn:9001/api/protocoluse.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1674297171000"
+            //会员服务协议   1北京爱语吧  2北京爱语言
+            buildConfigField "String", "AGREEMENT_COMPANY", '"2"'
+        }
+
+
+        huawei {
+
+            ndk {
+                abiFilters "arm64-v8a"
+            }
+            applicationId "com.ai.bbcpro"
+            minSdk 24
+            targetSdk 31
+            versionCode 15
+            versionName "2.21.15"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"1112090125"'
+            buildConfigField "String", "QQ_APP_SECRET", '"TQsh7vRT26u8x8BM"'
+            buildConfigField "String", "BRAND", '"huawei"'
+            manifestPlaceholders = [
+                    qqappid: '100737826',
+                    apkName: 'BBCE6分钟英语',
+                    apkIcon: '@drawable/bbe'
+            ]
+            buildConfigField "String", "AD_KEY_SPLASH", '"0050"'
+            buildConfigField "String", "AD_KEY_BANNER", '"0051"'
+            buildConfigField "String", "PROTOCOL_PRI", '"http://www.qomolama.com.cn/protocolpri.jsp?company=5&apptype=' + manifestPlaceholders.apkName + '"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://www.qomolama.com.cn/protocoluse.jsp?company=1&apptype=' + manifestPlaceholders.apkName + '"'
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1679989594000"
+            //会员服务协议
+            buildConfigField "String", "AGREEMENT_COMPANY", '"2"'//北京爱语吧
+        }
+        /*oppo  xiaomi*/
+        oppo {
+            ndk {
+                abiFilters "arm64-v8a", "x86_64"
+            }
+            applicationId "com.ai.bbcpro"
+            minSdk 24
+            targetSdk 31
+            versionCode 17
+            versionName "2.22.15"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"1112090125"'
+            buildConfigField "String", "QQ_APP_SECRET", '"TQsh7vRT26u8x8BM"'
+            buildConfigField "String", "BRAND", '"oppo"'
+            manifestPlaceholders = [
+                    qqappid: '100737826',
+                    apkName: 'BBE英语',
+                    apkIcon: '@drawable/bbe'
+            ]
+            buildConfigField "String", "AD_KEY_SPLASH", '"0050"'
+            buildConfigField "String", "AD_KEY_BANNER", '"0051"'
+            buildConfigField "String", "PROTOCOL_PRI", '"http://iuserspeech.iyuba.cn:9001/api/protocolpri.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://iuserspeech.iyuba.cn:9001/api/protocoluse.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1674297171000"
+
+            //会员服务协议
+            buildConfigField "String", "AGREEMENT_COMPANY", '"2"'//北京爱语吧
+        }
+
+        /*百度、360*/
+        baidu {
+            ndk {
+                abiFilters "arm64-v8a"
+            }
+            applicationId "com.ai.bbcpro"
+            minSdk 24
+            targetSdk 31
+            versionCode 17
+            versionName "2.22.15"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"1112090125"'
+            buildConfigField "String", "QQ_APP_SECRET", '"TQsh7vRT26u8x8BM"'
+            //控制title的显示BRAND
+            buildConfigField "String", "BRAND", '"baidu"'
+            manifestPlaceholders = [
+                    qqappid: '100737826',
+                    apkName: 'BBE英语',
+                    apkIcon: '@drawable/bbe'
+            ]
+            buildConfigField "String", "AD_KEY_SPLASH", '"0050"'
+            buildConfigField "String", "AD_KEY_BANNER", '"0051"'
+            buildConfigField "String", "PROTOCOL_PRI", '"http://iuserspeech.iyuba.cn:9001/api/protocolpri.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://iuserspeech.iyuba.cn:9001/api/protocoluse.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1674297171000"
+            //会员服务协议
+            buildConfigField "String", "AGREEMENT_COMPANY", '"2"'//北京爱语吧
+        }
+        /*应用宝*/
+        yyb {
+            ndk {
+                abiFilters "arm64-v8a", "armeabi-v7a"
+            }
+            applicationId "com.ai.bbcpro"
+            minSdk 24
+            targetSdk 31
+            versionCode 17
+            versionName "2.22.15"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"1112090125"'
+            buildConfigField "String", "QQ_APP_SECRET", '"TQsh7vRT26u8x8BM"'
+            //控制title的显示BRAND
+            buildConfigField "String", "BRAND", '"yyb"'
+
+            manifestPlaceholders = [
+                    qqappid: '100737826',
+                    apkName: 'BBE英语',
+                    apkIcon: '@drawable/bbe'
+            ]
+            buildConfigField "String", "AD_KEY_SPLASH", '"0050"'
+            buildConfigField "String", "AD_KEY_BANNER", '"0051"'
+            buildConfigField "String", "PROTOCOL_PRI", '"http://iuserspeech.iyuba.cn:9001/api/protocolpri.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://iuserspeech.iyuba.cn:9001/api/protocoluse.jsp?apptype=' + manifestPlaceholders.apkName + '&company=3"'
+
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1681026925000"
+
+            //会员服务协议
+            buildConfigField "String", "AGREEMENT_COMPANY", '"2"'//北京爱语吧
+        }
+
+        vivo {
+            ndk {
+                abiFilters "arm64-v8a"
+            }
+            applicationId "com.ai.bbepro"
+            minSdk 24
+            targetSdk 31
+            versionCode 17
+            versionName "2.22.15"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"100836790"'
+            buildConfigField "String", "QQ_APP_SECRET", '"dd0dba5b9a3c243937bf629955a12a87"'
+            //控制title的显示BRAND
+            buildConfigField "String", "BRAND", '"vivo"'
+            manifestPlaceholders = [qqappid: '100737826', apkName: 'BBCE英语', apkIcon: '@drawable/bbce']
+
+            buildConfigField "String", "AD_KEY_SPLASH", '"0052"'
+            buildConfigField "String", "AD_KEY_BANNER", '"0053"'
+
+            buildConfigField "String", "PROTOCOL_PRI", '"http://iuserspeech.iyuba.cn:9001/api/protocolpri.jsp?apptype=' + manifestPlaceholders.apkName + '&company=4"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://iuserspeech.iyuba.cn:9001/api/protocoluse.jsp?apptype=' + manifestPlaceholders.apkName + '&company=4"'
+
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1678504792000"
+            //会员服务协议
+            buildConfigField "String", "AGREEMENT_COMPANY", '"2"'//北京爱语吧
+        }
+
+        baidu2 {
+
+            ndk {
+                abiFilters "arm64-v8a"
+            }
+            applicationId "com.ai.bbepro"
+            minSdk 24
+            targetSdk 31
+            versionCode 18
+            versionName "2.23.21"
+            dimension "release"
+            buildConfigField "String", "QQ_APP_KEY", '"100836790"'
+            buildConfigField "String", "QQ_APP_SECRET", '"dd0dba5b9a3c243937bf629955a12a87"'
+            //控制title的显示BRAND
+            buildConfigField "String", "BRAND", '"meizu"'
+            manifestPlaceholders = [qqappid: '100737826', apkName: '6分钟英语', apkIcon: '@drawable/bbc']
+
+            buildConfigField "String", "ICP", '"京ICP备18027903号-13A"'
+
+            buildConfigField "String", "SPLASH_AD_KEY_CSJ", '"0052"'
+            buildConfigField "String", "SPLASH_AD_KEY_YLH", '"0000"'
+            buildConfigField "String", "SPLASH_AD_KEY_KS", '"0000"'
+            buildConfigField "String", "SPLASH_AD_KEY_BD", '"0000"'
+            buildConfigField "String", "SPLASH_AD_KEY_BZ", '"0000"'
+
+
+            //banner广告
+            buildConfigField "String", "BANNER_AD_KEY_CSJ", '"0053"'
+            buildConfigField "String", "BANNER_AD_KEY_YLH", '"0000"'
+
+
+            //信息流广告
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_CSJ", '"0000"'
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_YLH", '"0000"'
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_KS", '"0000"'
+            buildConfigField "String", "TEMPLATE_SCREEN_AD_KEY_BD", '"0000"'
+
+            //插屏广告 Interstitial
+            buildConfigField "String", "INTERSTITIAL_AD_KEY_CSJ", '"0000"'
+            buildConfigField "String", "INTERSTITIAL_AD_KEY_YLH", '"0000"'
+            buildConfigField "String", "INTERSTITIAL_AD_KEY_BD", '"0000"'
+
+            buildConfigField "String", "PROTOCOL_PRI", '"http://www.qomolama.com.cn/protocolpri.jsp?apptype=' + manifestPlaceholders.apkName + '&company=山东爱语吧"'
+            buildConfigField "String", "PROTOCOL_USE", '"http://www.qomolama.com.cn/protocoluse.jsp?apptype=' + manifestPlaceholders.apkName + '&company=山东爱语吧"'
+            /**
+             * examineTime 用来设置广告的隐藏时间  毫秒级
+             */
+            buildConfigField "long", "examineTime", "1678504792000"
+            //会员服务协议
+            buildConfigField "String", "AGREEMENT_COMPANY", '"3"'// 2北京爱语言 3山东爱语吧
+        }
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.iyuba
+        }
+        debug {
+            signingConfig signingConfigs.iyuba
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['.jar', '.aar'])
+
+    implementation "androidx.recyclerview:recyclerview:1.3.2"
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    testImplementation 'junit:junit:4.+'
+    implementation project(':common')
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    api files('libs/volley.jar')
+    api "androidx.cardview:cardview:$rootProject.ext.cardViewVersion"
+    api 'de.hdodenhof:circleimageview:3.1.0'
+    api 'org.litepal.android:core:2.0.0'
+    api 'com.github.bingoogolapple:BGARefreshLayout-Android:2.0.1'
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.12'
+
+
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+    implementation 'com.kaopiz:kprogresshud:1.0.2'
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+
+
+    implementation 'com.tencent.tauth:qqopensdk:3.51.2'//QQ官方SDK依赖库
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'//微信官方SDK依赖库
+    implementation 'com.blankj:utilcode:1.19.0'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
+
+    implementation "org.permissionsdispatcher:permissionsdispatcher:$rootProject.ext.permissionDispatcherVersion"
+    annotationProcessor "org.permissionsdispatcher:permissionsdispatcher-processor:$rootProject.ext.permissionDispatcherVersion"
+
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
+    implementation("com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion") {
+        exclude group: 'com.google.code.gson'
+    }
+    implementation("com.squareup.retrofit2:converter-simplexml:$rootProject.ext.retrofitVersion") {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.21"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    implementation "jp.wasabeef:glide-transformations:$rootProject.ext.glideTransformationsVersion"
+    implementation "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
+
+
+    api "com.github.linger1216:labelview:$rootProject.ext.labelviewVersion"
+    api "com.flyco.roundview:FlycoRoundView_Lib:$rootProject.ext.flycoRoundViewVersion@aar"
+    api "com.github.chrisbanes:PhotoView:$rootProject.ext.photoViewVersion"
+
+    api(files("libs/youdaosdk_4.3.3.aar"))
+    api(files("libs/data-youdao-0.1.8-fix2.aar"))
+    api(files("libs/data-iyuba-0.2.0-fix2.aar"))
+    api(files("libs/data-ydsdk-0.3.9-fix2.aar"))
+    api(files("libs/adbrowser-1.0.1.aar"))
+    api(files("libs/sdk-0.3.9.aar"))
+    api(files("libs/videocompressor-1.0.aar"))
+
+    api(files("libs/iyubamovies-1.2.9.aar"))
+    api(files("libs/imooclib-1.7.1.aar"))
+    api(files("libs/commonvar-1.0.0.aar"))
+    api(files("libs/mvp-1.0.0.aar"))
+    api(files("libs/commonres-1.2.0.aar"))
+    api(files("libs/toolbox-1.1.0.aar"))
+    api(files("libs/waitdialog-1.2.1.aar"))
+    api(files("libs/player-1.2.8.aar"))
+    api(files("libs/player-exo-1.2.8-alpha01.aar"))
+    api(files("libs/popmenu-0.2.2.aar"))
+    api(files("libs/universitypicker-0.2.1.aar"))
+    api(files("libs/share-0.1.3.aar"))
+    api(files("libs/imagetextview-1.2.1.aar"))
+    api(files("libs/privacy-1.0.4.aar"))
+    api(files("libs/adblocker-1.0.2.aar"))
+    api(files("libs/mixed_converter-1.2.1.aar"))
+
+    api(files("libs/resize-1.0.0.aar"))
+    api(files("libs/basicdl-1.2.3-alpha01.aar"))
+    api(files("libs/basicfavor-1.2.8-alpha01.aar"))
+    api(files("libs/mp3trans-0.2.0.aar"))
+    api(files("libs/parse-0.2.4.aar"))
+    api(files("libs/sonic-1.0.1.aar"))
+    api(files("libs/subtitle-1.2.2.aar"))
+    api(files("libs/progresswheel-1.0.1.aar"))
+
+    api(files("libs/user-0.2.7.aar"))
+    api(files("libs/dlex-1.0.4.aar"))
+    api(files("libs/creator-1.0.0.aar"))
+    api(files("libs/textpage-1.2.1.aar"))
+    api(files("libs/share-mob-0.1.3.aar"))
+    api(files("libs/dom4j-2.1.1.jar"))
+    api(files("libs/recycler-0.2.0.aar"))
+
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+
+    api "com.github.AnthonyFermin:DropDownView:1.0.1"
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.xingliuhua:xlhratingbar_lib:1.0.1'
+    //点击水波纹的效果
+    implementation 'com.balysv:material-ripple:1.0.2'
+
+    // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库
+    implementation 'com.umeng.umsdk:common:+'// 必选
+    implementation 'com.umeng.umsdk:asms:+'// 必选
+    implementation 'com.umeng.umsdk:uyumao:+'
+    // 高级运营分析功能依赖库，使用U-App卸载分析、开启反作弊能力请务必集成。common需搭配v9.6.3及以上版本，asms需搭配v1.7.0及以上版本。需更新隐私声明。
+    implementation 'com.umeng.umsdk:apm:+'// U-APM产品包依赖，必选
+
+
+    implementation 'com.github.andyxialm:ColorDialog:1.0.0'
+    api "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0"
+    implementation "com.youth.banner:banner:1.4.10"
+
+    //视频
+    api(files("libs/headlinelibrary-1.8.0.aar"))
+    api(files("libs/headlinetalk-1.3.7.aar"))
+    api(files("libs/exomedia-4.3.0-modify.aar"))
+    //个人中心
+    api(files("libs/personalhomelibrary-1.6.6.aar"))
+    api(files("libs/roundprogressbar-1.0.0.aar"))
+
+
+    implementation("com.daimajia.swipelayout:library:1.2.0@aar") {
+        exclude group: 'com.android.support'
+    }
+    api(files("libs/mse-0.2.7.aar"))
+    implementation "com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0"
+    api(files("libs/vpager-0.1.0.aar"))
+    implementation "com.github.naman14:TAndroidLame:1.1"
+
+    //adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+
+    //二维码
+    implementation 'com.google.zxing:core:3.3.3'
+    //日历
+    api(files("libs/calendarview-2.0.aar"))
+    //exo  player
+    implementation "com.google.android.exoplayer:exoplayer-core:2.19.1"
+    //recycleView的布局 自动换行
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    //支持rxjava2  权限请求
+    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+    implementation "io.reactivex.rxjava3:rxjava:3.1.5"
+
+    //搜一搜
+    api(files("libs/headlinesearch-1.3.1.aar"))
+    //OAID
+    api(files("libs/oaid_sdk_2.5.1.aar"))
+    //训练营
+    api(files("libs/training_camp-1.0.8.aar"))
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+
+
+    //弹窗的框架
+    implementation 'io.github.razerdp:BasePopup:3.2.0'
+
+    //支持rxjava2
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    //有道智选需要
+    implementation "com.airbnb.android:lottie:5.2.0"
+
+    //广告
+    api(files("libs/mediatom-0.3.9-fix.aar"))
+    api(files("libs/ydsdk-0.3.9-fix.aar"))
+    api(files("libs/s2s-0.3.9.aar"))
+
+    api(files("libs/mediatom-tt-adapt-0.3.9-fix4.aar"))
+    api(files("libs/open_ad_sdk_6.8.0.5.aar"))
+    //倍孜
+    api(files("libs/mediatom-adhub-adapt-0.3.9.aar"))
+    api(files("libs/beizi_ad_sdk_3.5.0.9.aar"))
+    api(files("libs/beizi_fusion_sdk_4.90.4.11.aar"))
+    //百度广告
+    api(files("libs/mediatom-bd-adapt-0.3.9-fix-bdv9.373.aar"))
+    api(files("libs/Baidu_MobAds_SDK-release_v9.373.aar"))
+    //快手广告
+
+    api(files("libs/mediatom-ks-adapt-0.3.9.aar"))
+    api(files("libs/kssdk-ad-3.3.63-publishRelease-085cdfe109.aar"))
+    //腾讯广告
+    api(files("libs/mediatom-tx-adapt-0.3.9-fix2.aar"))
+    api(files("libs/GDTSDK.unionNormal.4.620.1490.aar"))
+
+    //科大讯飞
+    api(files("libs/s2s-0.3.9.aar"))
+
+    api(files("libs/mixnative-0.3.9-fix3.aar"))
+
+
+    implementation('com.github.lihangleo2:ShadowLayout:3.3.2') {
+        exclude module: 'glide'
+    }
+
+    implementation "androidx.startup:startup-runtime:1.2.0"
+}

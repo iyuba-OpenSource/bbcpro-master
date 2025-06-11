@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ai.bbcpro",
+  "variantName": "huaweiRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 12,
+      "versionName": "2.17.46",
+      "outputFile": "bbc_finish-huawei-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

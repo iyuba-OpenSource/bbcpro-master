@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/blog_back_btn"
+            style="@style/base_style_button_back_white"
+            android:background="?attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/blog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="资讯"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/btn_collect"-->
+        <!--android:layout_width="35dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="80dp"-->
+        <!--android:background="@drawable/bg_btncollect" />-->
+
+        <ImageView
+            android:id="@+id/btn_blogComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/iv_shareblog"
+            android:background="?attr/selectableItemBackground"
+            android:paddingBottom="13dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="12dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/ic_chat_white_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_shareblog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackground"
+            android:paddingBottom="13dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="6dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/ic_share_white_24dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/blog_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="哈哈"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/blog_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="哈哈"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.ai.bbcpro.widget.TextPage
+                android:id="@+id/textPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:fitsSystemWindows="true"
+                android:textIsSelectable="true"
+                android:textSize="18dp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line" />
+
+    <include layout="@layout/layout_banner_ad" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ai.bbcpro",
+  "variantName": "bbeRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 18,
+      "versionName": "2.23.21",
+      "outputFile": "[bbe]-release-[2.23.21]-[18]-2025-04-02.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/[bbe]-release-[2.23.21]-[18]-2025-04-02.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/[bbe]-release-[2.23.21]-[18]-2025-04-02.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 24
+}

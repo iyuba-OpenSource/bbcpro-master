@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/vip_mask"
+        android:fitsSystemWindows="true">
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="180dp"-->
+        <!--android:clickable="true"-->
+        <!--android:scaleType="center"-->
+
+        <!--android:src="@drawable/vip_mask" />-->
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_back_black_personal" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_icon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/pull_to_refresh_header_background" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="最长昵称的长度"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/expiredate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/vip_center_date_bg"
+            android:drawableLeft="@drawable/ic_vip_small"
+            android:padding="5dp"
+            android:text="2019-06-21"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expiredate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_iyubi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expiredate"
+                android:layout_gravity="center"
+                android:text="爱语币余额:"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_iyucoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <com.ai.bbcpro.ui.widget.IyuButton
+            android:id="@+id/btn_buyiyuba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:text="购买爱语币"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e2e2e2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="当前用户:"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/gray" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="爱语币余额:"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="0"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="用户状态: "
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/buy_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            tools:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有效期至: "
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/buy_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TabHost
+                android:id="@+id/vip_tab_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_native_vip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/rl1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="VIP权限说明"
+                                    android:textColor="#ff333333"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_vip_detail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:lineSpacingMultiplier="1.2"
+                                    android:text="@string/vip_intro1"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal1"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local1"
+                                    android:text="本应用会员1个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:checked="true"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥25"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal6"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local6"
+                                    android:text="本应用会员6个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥69"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal12"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local12"
+                                    android:text="本应用会员12个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥99"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal36"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local36"
+                                    android:text="本应用会员36个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥199"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_golden_vip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/rl1_godlen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="黄金VIP权限说明"
+                                    android:textColor="#ff333333"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_vip_detail_golden"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:lineSpacingMultiplier="1.2"
+                                    android:text="@string/vip_intro2"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal1_golden"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal1_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local1_golden"
+                                    android:text="黄金会员1个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local1_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:checked="true"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local1_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥98"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal3_golden"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal3_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local3_golden"
+                                    android:text="黄金会员3个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local3_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local3_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥198"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal6_golden"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal6_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local6_golden"
+                                    android:text="黄金会员6个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local6_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local6_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥299"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rllocal12_golden"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp">
+
+                                <TextView
+                                    android:id="@+id/tvlocal12_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@id/cb_local12_golden"
+                                    android:text="黄金会员12个月"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_local12_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/check_style"
+                                    android:enabled="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price_local12_golden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="30dp"
+                                    android:text="¥399"
+                                    android:textColor="#FFE69F2D"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.01dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#E0E0E0" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </TabHost>
+
+
+            <com.ai.bbcpro.ui.widget.IyuButton
+                android:id="@+id/go_to_pay"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/go_buy"
+                android:text="立即开通"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

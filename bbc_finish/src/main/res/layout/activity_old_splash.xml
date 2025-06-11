@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
+
+
+    <RelativeLayout
+        android:id="@+id/splash_rl_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="网络加载的图片广告"
+            android:scaleType="centerCrop" />
+
+        <com.ai.bbcpro.ui.widget.IyuButton
+            android:id="@+id/btn_skip"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/shape_btn_trans"
+            android:gravity="center"
+            android:text="跳过(5s)"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:adjustViewBounds="true"
+        android:contentDescription="本地加载的开屏图片"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_bottom"
+        android:visibility="visible" />
+
+</FrameLayout>

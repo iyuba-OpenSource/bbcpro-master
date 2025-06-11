@@ -1,0 +1,47 @@
+project.ext {
+  compileSdkVersion = 30
+  minSdkVersion = 24
+  targetSdkVersion = 29
+
+  appcompatVersion = '1.2.0'
+  cardViewVersion = '1.0.0'
+  swipeRefreshLayoutVersion = '1.1.0'
+  constraintLayoutVersion = '2.0.1'
+  materialVersion = '1.3.0'
+
+  retrofitVersion = '2.11.0'
+  okhttpVersion = '3.12.0'
+  rxandroidVersion = '2.1.1'
+  rxjavaVersion = '2.2.13'
+  glideVersion = '4.12.0'
+  glideTransformationsVersion = '4.3.0'
+  eventBusVersion = '3.2.0'
+  permissionDispatcherVersion = '4.8.0'
+  timberVersion = '4.7.1'
+  gsonVersion = '2.8.9'
+  ijkVersion = '0.8.8-modify@aar'
+
+  circleImageVersion = '3.1.0'
+  labelviewVersion = 'v1.1.2'
+  flycoRoundViewVersion = '1.1.4'
+  photoViewVersion = '2.0.0'
+
+  playerVersion = '1.2.7'
+  waitDialogVersion = '1.2.1'
+  recyclerVersion = '0.2.0'
+  popmenuVersion = '0.2.2'
+  universityPickerVersion = '0.2.1'
+
+  umengCommonVersion = '9.4.0'
+  umengAsmsVersion = '1.2.3'
+  umengShareVersion = '7.1.5'
+
+  mvpVersion = '1.0.0'
+  toolboxVersion = '1.0.8'
+  creatorVersion = "1.0.0"
+  userVersion = '0.2.6'
+  shareVersion = '0.1.2'
+  commonResVersion = '1.2.0'
+  commonVarVersion = '1.0.0'
+  privacyVersion = '1.0.3'
+}

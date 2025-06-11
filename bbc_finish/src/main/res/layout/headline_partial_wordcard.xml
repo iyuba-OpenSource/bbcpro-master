@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/headline_item_bg_white"
+  android:padding="16dp"
+  tools:layout_margin="16dp">
+
+  <ProgressBar
+    android:id="@+id/progressbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:minHeight="100dp"
+    android:visibility="visible"
+    tools:visibility="visible"/>
+
+  <LinearLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:id="@+id/image_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@drawable/headline_ic_close"
+        />
+
+      <TextView
+        android:id="@+id/text_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="man" />
+
+      <TextView
+        android:id="@+id/text_pron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_word"
+        android:layout_alignTop="@+id/image_speaker"
+        android:layout_alignBottom="@+id/image_speaker"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/image_speaker"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        tools:text="[man]"/>
+
+      <ImageView
+        android:id="@+id/image_speaker"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/text_word"
+        android:padding="5dp"
+        android:src="@drawable/headline_wordcard_speaker" />
+
+    </RelativeLayout>
+
+    <TextView
+      android:id="@+id/text_definition"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:ellipsize="end"
+      android:maxLines="4"
+      android:singleLine="false"
+      android:textColor="@android:color/black"
+      android:textSize="14sp"
+      tools:text="This is definition of word man"/>
+
+    <TextView
+      android:id="@+id/text_collect"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:background="@drawable/headline_btn_rectangle_bg"
+      android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+      android:padding="5dp"
+      android:text="添加至生词本"
+      android:textColor="@color/colorPrimary"
+      android:textSize="14sp" />
+
+  </LinearLayout>
+
+</FrameLayout>

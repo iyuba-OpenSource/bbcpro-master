@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <bitmap
+            android:antialias="true"
+            android:dither="true"
+            android:filter="true"
+            android:src="@mipmap/splash_bg" />
+
+    </item>
+
+    <item android:top="150dp">
+        <bitmap
+            android:antialias="true"
+            android:dither="true"
+            android:filter="true"
+            android:gravity="center_horizontal|top"
+            android:src="@mipmap/splash_top" />
+    </item>
+
+
+    <item android:gravity="bottom|center_horizontal">
+        <bitmap
+            android:antialias="true"
+            android:dither="true"
+            android:filter="true"
+            android:src="@mipmap/splash_bottom" />
+    </item>
+
+</layer-list>

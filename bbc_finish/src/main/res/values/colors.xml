@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="headline_item_small_title_color">#343434</color>
+    <color name="headline_highlight">#0477c7</color>
+
+    <!--<color name="app_color">#29b6f6</color>-->
+    <color name="app_color">#3b76f4</color>
+    <!--<color name="colorPrimary">#79b5fc</color>-->
+    <color name="colorPrimary">#3b76f4</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#03a9f4</color>-->
+    <color name="colorPrimaryDark">#3b76f4</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+
+    <!--<color name="green_status_bar">@color/colorPrimaryDark</color>-->
+
+
+    <!-- 知乎蓝色 -->
+
+    <!-- 分隔线的灰色 -->
+
+    <color name="background">#9ba</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <!-- 白色 -->
+    <!-- 象牙色 -->
+    <!-- 亮黄色 -->
+    <!-- 黄色 -->
+    <!-- 雪白色 -->
+    <!-- 花白色 -->
+    <!-- 柠檬绸色 -->
+    <!-- 米绸色 -->
+    <!-- 海贝色 -->
+    <!-- 淡紫红 -->
+    <!-- 番木色 -->
+    <!-- 白杏色 -->
+    <!-- 浅玫瑰色 -->
+    <!-- 桔黄色 -->
+    <!-- 鹿皮色 -->
+    <!-- 纳瓦白 -->
+    <!-- 桃色 -->
+    <!-- 金色 -->
+    <!-- 粉红色 -->
+    <!-- 亮粉红色 -->
+    <color name="orange">#ffa500</color>
+    <!-- 橙色 -->
+    <!-- 亮肉色 -->
+    <!-- 暗桔黄色 -->
+    <!-- 珊瑚色 -->
+    <!-- 热粉红色 -->
+    <!-- 西红柿色 -->
+    <color name="orangered">#ff4500</color>
+    <!-- 红橙色 -->
+    <!-- 深粉红色 -->
+    <!-- 紫红色 -->
+    <!-- 红紫色 -->
+    <color name="red">#ff0000</color>
+    <!-- 红色 -->
+    <!-- 老花色 -->
+    <!-- 亮金黄色 -->
+    <!-- 亚麻色 -->
+    <!-- 古董白 -->
+    <!-- 鲜肉色 -->
+    <color name="ghostwhite">#f8f8ff</color>
+    <!-- 幽灵白 -->
+    <!-- 薄荷色 -->
+    <!-- 烟白色 -->
+    <!-- 米色 -->
+    <!-- 浅黄色 -->
+    <!-- 沙褐色 -->
+    <!-- 天蓝色 -->
+    <!-- 蜜色 -->
+    <!-- 艾利斯兰 -->
+    <!-- 黄褐色 -->
+    <!-- 亮珊瑚色 -->
+    <!-- 苍麒麟色 -->
+    <!-- 紫罗兰色 -->
+    <!-- 暗肉色 -->
+    <!-- 淡紫色 -->
+    <!-- 亮青色 -->
+    <!-- 实木色 -->
+    <!-- 洋李色 -->
+    <!-- 淡灰色 -->
+    <!-- 暗深红色 -->
+    <!-- 苍紫罗兰色 -->
+    <!-- 金麒麟色 -->
+    <!-- 淡紫色 -->
+    <!-- 蓟色 -->
+    <!-- 亮灰色 -->
+    <!-- 亮灰色 -->
+    <!-- 茶色 -->
+    <!-- 巧可力色 -->
+    <!-- 秘鲁色 -->
+    <!-- 印第安红 -->
+    <!-- 中紫罗兰色 -->
+    <!-- 银色 -->
+    <!-- 暗黄褐色 -->
+    <!-- 褐玫瑰红 -->
+    <!-- 中粉紫色 -->
+    <!-- 暗金黄色 -->
+    <!-- 火砖色 -->
+    <!-- 粉蓝色 -->
+    <!-- 亮钢兰色 -->
+    <!-- 苍宝石绿 -->
+    <!-- 黄绿色 -->
+    <!-- 亮蓝色 -->
+    <!-- 暗灰色 -->
+    <!-- 暗灰色 -->
+    <!-- 褐色 -->
+    <!-- 赭色 -->
+    <!-- 暗紫色 -->
+    <!-- 苍绿色 -->
+    <!-- 暗紫罗兰色 -->
+    <!-- 中紫色 -->
+    <!-- 亮绿色 -->
+    <!-- 暗海兰色 -->
+    <!-- 重褐色 -->
+    <!-- 暗洋红 -->
+    <!-- 暗红色 -->
+    <!-- 紫罗兰蓝色 -->
+    <!-- 亮天蓝色 -->
+    <color name="skyblue">#87ceeb</color>
+    <!-- 天蓝色 -->
+    <color name="gray">#808080</color>
+    <!-- 灰色 -->
+    <color name="grey">#808080</color>
+    <!-- 灰色 -->
+    <!-- 橄榄色 -->
+    <color name="purple">#800080</color>
+    <!-- 紫色 -->
+    <!-- 粟色 -->
+    <!-- 碧绿色 -->
+    <!-- 黄绿色 -->
+    <!-- 草绿色 -->
+    <!-- 中暗蓝色 -->
+    <!-- 亮蓝灰 -->
+    <!-- 亮蓝灰 -->
+    <!-- 灰石色 -->
+    <!-- 灰石色 -->
+    <!-- 深绿褐色 -->
+    <!-- 石蓝色 -->
+    <!-- 暗灰色 -->
+    <!-- 暗灰色 -->
+    <!-- 中绿色 -->
+    <!-- 菊兰色 -->
+    <!-- 军兰色 -->
+    <!-- 暗橄榄绿 -->
+    <!-- 靛青色 -->
+    <!-- 中绿宝石 -->
+    <!-- 暗灰蓝色 -->
+    <!-- 钢兰色 -->
+    <!-- 皇家蓝 -->
+    <!-- 青绿色 -->
+    <!-- 中海蓝 -->
+    <!-- 橙绿色 -->
+    <!-- 暗瓦灰色 -->
+    <!-- 暗瓦灰色 -->
+    <!-- 海绿色 -->
+    <!-- 森林绿 -->
+    <!-- 亮海蓝色 -->
+    <color name="dodgerblue">#1e90ff</color>
+    <!-- 闪兰色 -->
+    <!-- 中灰兰色 -->
+    <!-- 浅绿色 -->
+    <!-- 青色 -->
+    <!-- 春绿色 -->
+    <!-- 酸橙色 -->
+    <!-- 中春绿色 -->
+    <!-- 暗宝石绿 -->
+    <!-- 深天蓝色 -->
+    <!-- 暗青色 -->
+    <!-- 水鸭色 -->
+    <color name="green">#008000</color>
+    <!-- 绿色 -->
+    <!-- 暗绿色 -->
+    <color name="blue">#0000ff</color>
+    <!-- 蓝色 -->
+    <!-- 中兰色 -->
+    <!-- 暗蓝色 -->
+    <!-- 海军色 -->
+    <color name="black">#000000</color>
+    <!-- 黑色 -->
+
+    <!-- 字幕同步颜色 -->
+
+    <!-- progresspieview -->
+
+    <!-- A light Holo shade of blue -->
+    <!-- A light Holo shade of green -->
+    <!-- A light Holo shade of red -->
+    <!-- A dark Holo shade of blue -->
+    <!-- A dark Holo shade of green -->
+    <!-- A dark Holo shade of red -->
+    <!-- A Holo shade of purple -->
+    <!-- A light Holo shade of orange -->
+    <!-- A dark Holo shade of orange -->
+    <!-- A really bright Holo shade of blue -->
+    <!-- 深  灰 -->
+    <!-- 按钮按下的背景颜色 -->
+    <!-- 墨绿色 -->
+    <!-- 天空蓝 -->
+    <!-- 优雅紫 -->
+    <!-- 少女红 -->
+    <!-- 宁静绿 -->
+    <!-- 活力橙 -->
+    <!-- 经典红 -->
+    <!-- 米白 -->
+    <!-- 淡绿 -->
+    <!-- 银灰 -->
+    <!-- 黑色 -->
+    <!-- 边框颜色 -->
+    <!-- 设置里面字体颜色 -->
+    <!-- 应用的主题颜色 -->
+    <!-- 黑色 用作背景 -->
+    <!-- 灰色字体 -->
+    <!-- 灰色背景1 -->
+    <!-- 红色 提醒 -->
+    <!-- 红色 提醒 -->
+    <!-- 红色 提醒 -->
+    <!-- 红色 提醒 -->
+    <!-- 移动课堂课程标题颜色 -->
+
+    <!-- 移动课堂课程标题颜色 -->
+    <!--<color name="theme_color">#FF9D34</color>-->
+    <!--<color name="theme_color">#79b5fc</color>-->
+    <color name="theme_color">#ffffff</color>
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
+    <color name="line">#ffd3dde6</color>
+    <!--     <color name="dialog_btn_pressed_color">#444141FF</color> -->
+    <color name="dark">#aa000000</color>
+
+    <!-- 课程名称的黑色 -->
+    <!-- 课程时间的灰色 -->
+    <!-- 课程报名的灰色 -->
+    <!-- 课程原价的灰色 -->
+    <!-- 课程类别的灰色 -->
+    <!--<color name="colorPrimary">#4CAF50</color>-->
+    <color name="light_grey">#A0A0A0</color>
+
+
+    <!--added on 7.25 for other kind of tests -->
+
+
+    <color name="text_black">#333333</color>
+
+    <color name="divider_line">#e2e2e2</color>
+    <color name="font_grey">#898989</color>
+
+    <color name="base_white">#FFFFFF</color>
+    <color name="base_night_float_color">#8a000000</color>
+
+    <!--<color name="colorPrimaryDark">@color/base_white</color>-->
+
+    <!-- 界面背景浅灰色 -->
+
+    <!-- 背景色 -->
+    <color name="item_select_color">#b2d3f4</color>
+
+    <color name="text_light_gray_color">#999999</color>
+
+    <!-- item选中色 -->
+    <color name="background_color">#ffffff</color>
+
+    <!-- 文字选中高亮颜色 本颜色为淡蓝色 -->
+    <color name="text_highlight">#2983c1</color>
+
+    <color name="black_0_6">#99000000</color>
+    <color name="line_gray">#c6c6c7</color>
+
+    <color name="style_color">#005fff</color><!--主题色-->
+    <color name="bottom_container_bg">#99000000</color><!--主题色-->
+    <color name="font_color">#333333</color><!--主题色-->
+    <color name="corner_color">#E8F0EA</color><!--主题色-->
+    <color name="vip_center_color">#DEAC5C</color><!--主题色-->
+    <color name="text_high_light">#1479C4</color><!--主题色-->
+    <!-- 灰色字体 -->
+    <color name="divider">#dcdcdc</color>
+
+
+    <color name="textColorVice">@color/colorPrimary</color>
+
+</resources>
